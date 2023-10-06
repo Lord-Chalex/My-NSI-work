@@ -21,13 +21,29 @@
     </script>
 </head>
 <body>
-    <h1>Convertisseur Binaire-Décimal</h1>
     <p>Entrez un nombre binaire :</p>
     <input type="text" id="binaryInput" placeholder="Ex. 1101">
     <button onclick="convertBinaryToDecimal()">Convertir</button>
     <p id="decimalOutput"></p>
     <h1>decimal - convertisseur binaire</h1>
-
+    function convertDecimalToBinary() {
+        const decimalInput = parseInt(document.getElementById("decimalInput").value);
+        const binaryOutput = document.getElementById("binaryOutput");
+        
+        if (!isNaN(decimalInput)) {
+            const binaryValue = decimalInput.toString(2);
+            binaryOutput.textContent = "Binaire : " + binaryValue;
+        } else {
+            binaryOutput.textContent = "Veuillez entrer un nombre décimal valide.";
+        }
+    }
+</script>
+</head>
+<body>
+<p>Entrez un nombre décimal :</p>
+<input type="text" id="decimalInput" placeholder="Ex. 10">
+<button onclick="convertDecimalToBinary()">Convertir</button>
+<p id="binaryOutput"></p>
 
 
 
