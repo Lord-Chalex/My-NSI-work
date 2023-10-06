@@ -5,6 +5,28 @@
 </head>
 <body>
     <h1>convertisseur binaire - decimal</h1>
+    <script>
+        function convertBinaryToDecimal() {
+            const binaryInput = document.getElementById("binaryInput").value;
+            const decimalOutput = document.getElementById("decimalOutput");
+            
+            const decimalValue = parseInt(binaryInput, 2);
+            
+            if (!isNaN(decimalValue)) {
+                decimalOutput.textContent = "Décimal : " + decimalValue;
+            } else {
+                decimalOutput.textContent = "Veuillez entrer un nombre binaire valide.";
+            }
+        }
+    </script>
+</head>
+<body>
+    <h1>Convertisseur Binaire-Décimal</h1>
+    <p>Entrez un nombre binaire :</p>
+    <input type="text" id="binaryInput" placeholder="Ex. 1101">
+    <button onclick="convertBinaryToDecimal()">Convertir</button>
+    <p id="decimalOutput"></p>
+    <h1>decimal - convertisseur binaire</h1>
 
 
 
