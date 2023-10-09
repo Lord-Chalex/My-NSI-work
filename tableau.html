@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Créer un graphique</title>
+    <!-- Inclure Chart.js -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+    <h1>Créer un graphique</h1>
+    <div>
+        <label for="valeur">Entrez une valeur :</label>
+        <input type="number" id="valeur">
+        <button onclick="ajouterValeur()">Ajouter</button>
+    </div>
+    <canvas id="monGraphique" width="400" height="200"></canvas>
+
+    <script>
+        // Initialiser un tableau pour stocker les valeurs
+        var valeurs = [];
+
+        // Obtenir le canvas
+        var canvas = document.getElementById('monGraphique');
+        var ctx = canvas.getContext('2d');
+
+        // Fonction pour ajouter une valeur au tableau et mettre à jour le graphique
+        function ajouterValeur() {
+            var valeurInput = document.getElementById('valeur').value;
+            valeurs.push(parseFloat(valeurInput));
+            document.getElementById('valeur').value = '';
+
+            // Mettre à jour le graphique
+            mettreAJourGraphique();
+        }
+
+        // Fonction pour mettre à jour le graphique
+        function mettreAJourGraphique() {
+            // Définir les données du graphique
+            var data = {
+                labels: Array.from(Array(valeurs.length).keys()),
+                datasets: [{
+                    label: 'Valeurs',
+                    data: valeurs,
+                    backgroundColor: 'rgba(75, 192, 192, 0.2)',
+                    borderColor: 'rgba(75, 192, 192, 1)',
+                    borderWidth: 1
+                }]
+            };
+
+            // Configurer les options du graphique
+            var options = {
+                scales: {
+                    y: {
+                        beginAtZero: true
+                    }
+                }
+            };
+
+            // Créer le graphique
+            var myChart = new Chart(ctx, {
+                type: 'line',
+                data: data,
+                options: options
+            });
+        }
+    </script>
+</body>
+</html>
