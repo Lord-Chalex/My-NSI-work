@@ -1,7 +1,11 @@
-@import url(https://github.com/Lord-Chalex/Lord-Chalex/assets/146172598/9689e083-efd8-4857-94f5-39fe257a927a);
 
 body { 
     display: flex;
     justify-content: center;
     align-items: center;
 }
+
+element {
+    background-image: url('https://github.com/Lord-Chalex/Lord-Chalex/assets/146172598/9689e083-efd8-4857-94f5-39fe257a927a');
+  }
+  
