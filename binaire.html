@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Page 1</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<style>
+    /* Style pour le menu */
+    ul {
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+        background-color: #333; /* Couleur de fond du menu */
+        overflow: hidden;
+    }
+
+    li {
+        float: left;
+    }
+
+    li a {
+        display: block;
+        color: white; /* Couleur du texte du menu */
+        text-align: center;
+        padding: 14px 16px;
+        text-decoration: none;
+    }
+
+    li a:hover {
+        background-color: #555; /* Couleur de fond lors du survol */
+    }
+</style>
+</head>
+<body>
+<ul>
+    <li><a href="https://lord-chalex.github.io/My-NSI-work/index">Accueil</a></li>
+    <li><a href="https://lord-chalex.github.io/My-NSI-work/binaire">convertiseur binaire : decimale</a></li>
+    <li><a href="https://lord-chalex.github.io/My-NSI-work/decimale">convertiseur decimale : binaire</a></li>
+    <li><a href="#">temp</a></li>
+</ul>
+<body>
+    <script>
+        function convertBinaryToDecimal() {
+            const binaryInput = document.getElementById("binaryInput").value;
+            const decimalOutput = document.getElementById("decimalOutput");
+            
+            const decimalValue = parseInt(binaryInput, 2);
+            
+            if (!isNaN(decimalValue)) {
+                decimalOutput.textContent = "Décimal : " + decimalValue;
+            } else {
+                decimalOutput.textContent = "Veuillez entrer un nombre binaire valide.";
+            }
+        }
+    </script>
+</head>
+
+</html>

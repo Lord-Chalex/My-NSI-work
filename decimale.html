@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Page 2</title>
+    <style>
+        /* Style pour le menu */
+        ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            background-color: #333; /* Couleur de fond du menu */
+            overflow: hidden;
+        }
+
+        li {
+            float: left;
+        }
+
+        li a {
+            display: block;
+            color: white; /* Couleur du texte du menu */
+            text-align: center;
+            padding: 14px 16px;
+            text-decoration: none;
+        }
+
+        li a:hover {
+            background-color: #555; /* Couleur de fond lors du survol */
+        }
+    </style>
+</head>
+<body>
+    <ul>
+        <li><a href="https://lord-chalex.github.io/My-NSI-work/index">Accueil</a></li>
+        <li><a href="https://lord-chalex.github.io/My-NSI-work/binaire">convertiseur binaire : decimale</a></li>
+        <li><a href="https://lord-chalex.github.io/My-NSI-work/decimale">convertiseur decimale : binaire</a></li>
+        <li><a href="#">temp</a></li>
+    </ul>
+    <body>
+        <h1>Convertisseur Binaire-Décimal</h1>
+        <p>Entrez un nombre binaire :</p>
+        <input type="text" id="binaryInput" placeholder="Ex. 1101">
+        <button onclick="convertBinaryToDecimal()">Convertir</button>
+        <p id="decimalOutput"></p>
+        <script>
+            function convertDecimalToBinary() {
+                const decimalInput = parseInt(document.getElementById("decimalInput").value);
+                const binaryOutput = document.getElementById("binaryOutput");
+                
+                if (!isNaN(decimalInput)) {
+                    const binaryValue = decimalInput.toString(2);
+                    binaryOutput.textContent = "Binaire : " + binaryValue;
+                } else {
+                    binaryOutput.textContent = "Veuillez entrer un nombre décimal valide.";
+                }
+            }
+        </script>
+         <img src="https://github.com/Lord-Chalex/Lord-Chalex/assets/146172598/56390924-0d6b-4474-b554-006fcfaf87f1" alt="" width="20%" height="20%">
+    </head>
+    <body>
+        <h1>Convertisseur Décimal-Binaire</h1>
+        <p>Entrez un nombre décimal :</p>
+        <input type="text" id="decimalInput" placeholder="Ex. 10">
+        <button onclick="convertDecimalToBinary()">Convertir</button>
+        <p id="binaryOutput"></p>
+        <img src="https://github.com/Lord-Chalex/Lord-Chalex/assets/146172598/6dd97fac-4112-4d20-bbdd-51e9e8c666a2" alt="" width="20%" height="20%">
+    </body>
+</body>
+</html>

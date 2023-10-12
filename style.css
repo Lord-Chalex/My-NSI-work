@@ -1,0 +1,12 @@
+@import url(https://lord-chalex.github.io/My-NSI-work/index);
+body {
+    display: flex;
+    flex-direction: column; 
+    justify-content: center;
+    align-items: center;
+    background-image: url('https://github.com/Lord-Chalex/Lord-Chalex/assets/146172598/9689e083-efd8-4857-94f5-39fe257a927a');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    color: rgb(0,0, 102);
+}
