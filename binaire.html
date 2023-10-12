@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Page 1</title>
+    <title>binaire</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 <style>
@@ -34,25 +34,31 @@
 <body>
 <ul>
     <li><a href="https://lord-chalex.github.io/My-NSI-work/index">Accueil</a></li>
-    <li><a href="https://lord-chalex.github.io/My-NSI-work/binaire">convertiseur binaire : decimale</a></li>
-    <li><a href="https://lord-chalex.github.io/My-NSI-work/decimale">convertiseur decimale : binaire</a></li>
+    <li><a href="https://lord-chalex.github.io/My-NSI-work/binaire">convertiseur binaire </a></li>
+    <li><a href="https://lord-chalex.github.io/My-NSI-work/decimale">convertiseur decimale </a></li>
     <li><a href="#">temp</a></li>
 </ul>
 <body>
+    <title>Convertisseur Binaire en Décimal</title>
     <script>
         function convertBinaryToDecimal() {
-            const binaryInput = document.getElementById("binaryInput").value;
-            const decimalOutput = document.getElementById("decimalOutput");
+            var binaryInput = document.getElementById("binaryInput").value;
+            var decimalOutput = document.getElementById("decimalOutput");
             
-            const decimalValue = parseInt(binaryInput, 2);
+            // Conversion binaire en décimal
+            var decimalValue = parseInt(binaryInput, 2);
             
-            if (!isNaN(decimalValue)) {
-                decimalOutput.textContent = "Décimal : " + decimalValue;
-            } else {
-                decimalOutput.textContent = "Veuillez entrer un nombre binaire valide.";
-            }
+            decimalOutput.innerHTML = "Décimal : " + decimalValue;
         }
     </script>
+</head>
+<body>
+    <h1>Convertisseur Binaire en Décimal</h1>
+    <p>Saisissez un nombre binaire :</p>
+    <input type="text" id="binaryInput">
+    <button onclick="convertBinaryToDecimal()">Convertir</button>
+    <p id="decimalOutput">Décimal : </p>
+</body>
 </head>
 
 </html>
