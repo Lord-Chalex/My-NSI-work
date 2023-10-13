@@ -9,7 +9,8 @@ body {
     background-repeat: no-repeat;
     background-position: center;
     color: rgb(255, 0, 34);
-    ul {
+}
+ul {
         list-style-type: none;
         margin: 0;
         padding: 0;
@@ -32,4 +33,3 @@ body {
     li a:hover {
         background-color: #555; 
     }
-}
