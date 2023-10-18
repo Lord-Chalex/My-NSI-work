@@ -12,12 +12,24 @@
         <li><a href="https://lord-chalex.github.io/My-NSI-work/Décimal-Binaire">convertiseur decimale </a></li>
         <li><a href="https://lord-chalex.github.io/My-NSI-work/login">connection</a></li>
     </ul>
+    <script>
+        function convertDecimalToBinary() {
+    const decimalInput = parseInt(document.getElementById("decimalInput").value);
+    const binaryOutput = document.getElementById("binaryOutput");
+    
+    if (!isNaN(decimalInput)) {
+        const binaryValue = decimalInput.toString(2);
+        binaryOutput.textContent = "Binaire : " + binaryValue;
+    } else {
+        binaryOutput.textContent = "Veuillez entrer un nombre décimal valide.";
+    }
+}
+    </script>
     <h1>Login</h1>
     <p>Entrez votre mot de passe</p>
     <input type="password" id="passwordInput" placeholder="Password">
     <button onclick="login()">Login</button>
     <p id="loginMessage"></p>
-
 
 </head>
 </html>

@@ -13,7 +13,20 @@
         <li><a href="https://lord-chalex.github.io/My-NSI-work/Décimal-Binaire">convertiseur decimale </a></li>
         <li><a href="https://lord-chalex.github.io/My-NSI-work/login">connection</a></li>
     </ul>
-
+<script>
+    function convertBinaryToDecimal() {
+    const binaryInput = document.getElementById("binaryInput").value;
+    const decimalOutput = document.getElementById("decimalOutput");
+    
+    const decimalValue = parseInt(binaryInput, 2);
+    
+    if (!isNaN(decimalValue)) {
+        decimalOutput.textContent = "Décimal : " + decimalValue;
+    } else {
+        decimalOutput.textContent = "Veuillez entrer un nombre binaire valide.";
+    }
+}
+</script>
 </head>
 <body>
 <h1>Convertisseur Binaire-Décimal</h1>
