@@ -13,17 +13,17 @@
         <li><a href="https://lord-chalex.github.io/My-NSI-work/login">connection</a></li>
     </ul>
     <script>
-        function convertDecimalToBinary() {
-    const decimalInput = parseInt(document.getElementById("decimalInput").value);
-    const binaryOutput = document.getElementById("binaryOutput");
-    
-    if (!isNaN(decimalInput)) {
-        const binaryValue = decimalInput.toString(2);
-        binaryOutput.textContent = "Binaire : " + binaryValue;
-    } else {
-        binaryOutput.textContent = "Veuillez entrer un nombre décimal valide.";
-    }
-}
+function login() {
+            
+            var password = document.getElementById("passwordInput").value;
+        
+           
+            if (password === "ADMIN") {
+                document.getElementById("loginMessage").textContent = "Connexion réussie!";
+                window.location.href = "https://lord-chalex.github.io/My-NSI-work/login2"
+            } else {
+                document.getElementById("loginMessage").textContent = "Échec de la connexion. Mot de passe incorrect.";
+            }
     </script>
     <h1>Login</h1>
     <p>Entrez votre mot de passe</p>
