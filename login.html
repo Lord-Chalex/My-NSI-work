@@ -3,34 +3,31 @@
 <head>
     <link rel="stylesheet" href="styles.css">
     <title>login | NSI work</title>
-
 </head>
 <body>
     <ul>
         <li><a href="https://lord-chalex.github.io/My-NSI-work/index">Accueil</a></li>
-        <li><a href="https://lord-chalex.github.io/My-NSI-work/Binaire-Décimal">convertiseur binaire </a></li>
-        <li><a href="https://lord-chalex.github.io/My-NSI-work/Décimal-Binaire">convertiseur decimale </a></li>
-        <li><a href="https://lord-chalex.github.io/My-NSI-work/login">connection</a></li>
+        <li><a href="https://lord-chalex.github.io/My-NSI-work/Binaire-Décimal">convertisseur binaire</a></li>
+        <li><a href="https://lord-chalex.github.io/My-NSI-work/Décimal-Binaire">convertisseur décimal</a></li>
+        <li><a href="https://lord-chalex.github.io/My-NSI-work/login">connexion</a></li>
     </ul>
-    <script>
-function login()  
-            
-            var password = document.getElementById("passwordInput").value;
-        
-           
-            if (password === "ADMIN") {
-                document.getElementById("loginMessage").textContent = "Connexion réussie!";
-                window.location.href = "https://lord-chalex.github.io/My-NSI-work/login2"
-            } else {
-                document.getElementById("loginMessage").textContent = "Échec de la connexion. Mot de passe incorrect.";
-            }
-    </script>
+
     <h1>Login</h1>
     <p>Entrez votre mot de passe</p>
-    <button onclick="login()">Convertir</button>
     <input type="password" id="passwordInput" placeholder="Password">
     <button onclick="login()">Login</button>
     <p id="loginMessage"></p>
 
-</head>
+    <script>
+        function login() {
+            var password = document.getElementById("passwordInput").value;
+            if (password === "ADMIN") {
+                document.getElementById("loginMessage").textContent = "Connexion réussie!";
+                window.location.href = "https://lord-chalex.github.io/My-NSI-work/login2";
+            } else {
+                document.getElementById("loginMessage").textContent = "Échec de la connexion. Mot de passe incorrect.";
+            }
+        }
+    </script>
+</body>
 </html>
