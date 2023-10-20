@@ -33,16 +33,16 @@ ul {
     li a:hover {
         background-color: #555; 
     }
-    .button {
-        background-color: #0074D9; /* Couleur de fond */
-        color: rgb(0, 0, 0); /* Couleur du texte */
-        padding: 10px 20px; /* Rembourrage (padding) pour l'espace autour du texte */
-        border: none; /* Supprime la bordure */
-        border-radius: 5px; /* Coins arrondis */
-        cursor: pointer; /* Curseur de type main (pointer) au survol */
-        font-size: 16px; /* Taille de police */
-      }
-      
-      .button:hover {
-        background-color: #0056b3; /* Couleur de fond au survol */
-      }
+    button {
+        background-color: #cc5916; /* Button background color */
+        color: #fff; /* Button text color */
+        padding: 10px 20px;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        font-size: 16px;
+        font-family: Arial, sans-serif; /* Font */
+    }
+    button:hover {
+        background-color: #a9410f; /* Button background color on hover */
+    }
